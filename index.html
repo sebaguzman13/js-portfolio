@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="" description="" />
+    <meta name="" description="" />
+    <meta name="charset" description="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sebastian Javier Guzman - React Dev</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+    <header>
+        <button class="mobile-only menu-btn" onclick="toggleMenu()"><i id="menu-btn" class="open-menu"></i></button>
+        <h1 class="hide-mobile">
+            Sebastian J Guzman
+        </h1>
+        <h1 id="mobile-h1" class="mobile-only">
+            SJG
+        </h1>
+        <nav class="hide-mobile">
+            <a href="#home" rel="bookmark"><i class="icon home"></i></a>
+            <a href="#about" rel="bookmark"><i class="icon about-me"></i></a>
+            <a href="#projects" rel="bookmark"><i class="icon projects"></i></a>
+            <a href="#contact" rel="bookmark"><i class="icon contact"></i></a>
+        </nav>
+
+        <section class="right-section hide-mobile" id="social-links">
+            <a href="https://github.com/sebaguzman13" rel="external"><i class="icon github"></i></a>
+
+            <a href="https://linkedin.com/in/sebastian-javier-guzman" rel="external"><i class="icon linkedin"></i></a>
+
+            <a href="#" rel="author noreferrer noopener" target="_blank"><i class="icon cv"></i></a>
+        </section>
+        <section class="mobile-only" id="mobile-social">
+            <button class="round-button social-btn" onclick="toggleSocialMenu()"><i id="social-menu"
+                    class="socials"></i></button>
+        </section>
+    </header>
+    <aside>
+        <section id="languages" style="display: none">
+            <ul>
+                <li class="flag arg"><i>ESP</i></li>
+                <li class="flag eng active"><i>ENG</i></li>
+            </ul>
+        </section>
+    </aside>
+    <main>
+        <section id="mobile-drawer" class="mobile-only">
+            <ul>
+                <li>
+                    <a href="#home" rel="bookmark">HOME</a>
+                </li>
+                <li>
+                    <a href="#about" rel="bookmark">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#projects" rel="bookmark">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="#contact" rel="bookmark">CONTACT</a>
+                </li>
+                <li>
+                    <a href="https://github.com/sebaguzman13" rel="author external"><i class="icon github"></i></a>
+
+                    <a href="https://linkedin.com/in/sebastian-javier-guzman" rel="author external"><i class="icon linkedin"></i></a>
+                    <!-- TODO ADD CV DOWNLOAD-->
+                    <a  rel="author noreferrer noopener" target="_blank"><i class="icon cv"></i></a>
+                </li>
+            </ul>
+
+        </section>
+        <section id="home">
+            <h3>Web Development from idea to carrer</h3>
+        </section>
+        <!-- About Me Personal description -->
+        <section id="about">
+            <section id="description">
+                <p>
+                    My objective is to <strong>develop enjoyable
+                        applications</strong> and get to know other cultures.
+                </p>
+            </section>
+            <section id="skills">
+                <h4 class="hide-mobile">Skills</h4>
+                <p class="hide-mobile">Intermediate</p>
+                <ul>
+                    <li class="tag ">teamwork</li>
+                    <li class="tag js">javascript</li>
+                    <li class="tag java">java</li>
+                    <li class="tag mysql">MySQL</li>
+                    <li class="tag react">React js</li>
+                    <li class="tag material-ui">Material UI</li>
+                    <li class="tag bootstrap">Bootstrap</li>
+                </ul>
+                <p class="hide-mobile">Basic</p>
+                <ul>
+                    <li class="tag mongodb">MongoDB</li>
+                    <li class="tag react-native">React Native</li>
+                    <li class="tag redux">Redux</li>
+                    <li class="tag php">php</li>
+                    <li class="tag sass">SaSS</li>
+                    <li class="tag scrum">Scrum</li>
+                    <li class="tag liquibase">liquibase</li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- My online projects -->
+        <section id="projects">
+            <h3>Projects</h3>
+            <div class="entries">
+                <div class="entry">
+                    <a href="https://sjg-project-manager.netlify.app/">
+                        <img src="./assets/project-manager.png" alt="Project Manager" />
+                    </a>
+                    <a href="https://sjg-project-manager.netlify.app/">Project Manager</a>
+                    <p>Projects CRUD Manager, update Status, Manager and person in charge of the project.</p>
+                </div>
+
+                <div class="entry">
+                    <a href="https://zilean-counter.netlify.app/">
+                        <img src="./assets/zilean.png" alt="Zilean Counter" />
+                    </a>
+                    <a href="https://zilean-counter.netlify.app/">Zilean Counter</a>
+                    <p>Counter inspired on the Champion Zilean</p>
+                </div>
+
+                <div class="entry">
+                    <a href="https://www.ticketon.com/">
+                        <img src="./assets/ticketon-o.png" alt="Ticketon" />
+                    </a>
+                    <a href="https://www.ticketon.com/">Ticketon</a>
+                    <p>Event handler and Ticket selling application</p>
+                </div>
+
+                <div class="entry">
+                    <a href="https://tbtm.app/">
+                        <img src="./assets/tbtm-mic.png" alt="Take back the mic" />
+                    </a>
+                    <a href="https://tbtm.app/">Tbtm</a>
+                    <p>Take Back The Mic - Upload your art, share it with your friends amp it, and win the annual
+                        contest !</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insert Projects Here -->
+        <section id="contact">
+            <div>
+                <h3>Contact</h3>
+                <p class="subtitle">Got an idea to build?</p>
+                <p class="hide-mobile">
+                    Send me an email with your application thoughts and we'll make it real.
+                </p>
+                <a href="mailto:seba.guzman13@gmail.com">seba.guzman13@gmail.com</a>
+            </div>
+
+            <form id="contact-form" action="">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required />
+                <p id="name-error"></p>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+                <p id="email-error"></p>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                <p id="message-error"></p>
+
+                <button class="send-button"></button>
+            </form>
+        </section>
+        <button onclick="scrollToTop()" class="round-button"><i class="icon uparrow"></i></button>
+    </main>
+    <footer>
+        <section class="right-section">
+            <a href="https://github.com/sebaguzman13"><i class="icon github"></i></a>
+
+            <a href="https://linkedin.com/in/sebastian-javier-guzman"><i class="icon linkedin"></i></a>
+
+            <a href="#"><i class="icon cv"></i></a>
+        </section>
+        <p>2022 SebastianJGuzman - Free to Use</p>
+    </footer>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,950 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 14px;
+    background-color: #007991ff;
+    color: #222e50ff;
+}
+
+/* Header */
+header {
+    background-color: rgba(238, 186, 186, 0.075);
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+}
+
+header nav {
+    align-items: center;
+}
+
+nav>a {
+    text-decoration: none;
+}
+
+header h1 {
+    align-self: center;
+    font-size: 1.2em;
+    color: #fcde67;
+}
+
+.menu-btn {
+    background-color: transparent;
+    border: none;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-width: 50px;
+}
+
+header .right-section,
+footer .right-section {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 20%;
+    max-width: 150px;
+}
+
+/* Aside */
+aside {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    display: flex;
+    flex-flow: column;
+}
+
+/* Main */
+main {
+    padding: 0 10px;
+    margin-top: 150px;
+    max-width: 80%;
+    margin: 0 auto 50px auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+main>section {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+
+    scroll-snap-align: start;
+}
+
+/* Home section */
+#home {
+    font-size: 6em;
+    color: #fcde67;
+}
+
+/* About section*/
+#about {
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+#about>section {
+    width: 47%;
+    align-self: center;
+}
+
+#about #description {
+    font-size: 2em;
+    z-index: 2;
+}
+
+#about strong {
+    color: #fcde67;
+}
+
+/* Projects section */
+#projects {
+    text-align: center;
+}
+
+#projects h3 {
+    font-size: 2.5em;
+    color: #fcde67;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#projects .entries {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10%;
+    grid-auto-rows: minmax(100px, auto);
+    overflow: visible;
+}
+
+#projects .entry {
+    border-radius: 0 10px 0 0;
+    background: linear-gradient(transparent 60%, #80808052 95%);
+    transition: all 0.45s;
+    opacity: 0.45;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#projects .entry:hover {
+    background: linear-gradient(transparent 35%, #439a86aa 95%);
+    opacity: 1;
+    scale: 1.05;
+    /* box-shadow: 0 3px 10px rgb(95, 95, 95) ; */
+}
+
+#projects .entry img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    display: block;
+    margin: 0.25em auto 2rem auto;
+}
+
+#projects .entry img:hover {
+    box-shadow: 0 0 2px gray;
+    cursor: pointer;
+}
+
+.entry a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #222e50ff;
+}
+
+.entry p {
+    padding: 2ch;
+    color: white;
+}
+
+/* Contact section */
+#contact {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact>p {
+    color: white;
+    font-weight: bold;
+}
+
+#contact h3 {
+    font-size: 1.8em;
+    color: #fcde67;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#contact .subtitle {
+    font-size: 3.85em;
+    margin: 1rem auto;
+    color: #222e50ff;
+}
+
+#contact div {
+    flex-grow: 1;
+    padding-right: 5ch;
+    padding-bottom: 5em;
+}
+
+#contact div p {
+    color: black;
+}
+
+#contact a[href^="mailto"] {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fcde67;
+    margin-top: 4rem;
+    letter-spacing: 0.72px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#contact a[href^="mailto"]::before {
+    content: url("./../assets/icons8-mail-50.png");
+    text-decoration: none;
+    display: inline-flex;
+    height: 1.5em;
+    width: 2.5em;
+}
+
+#contact #contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: black;
+}
+
+#contact-form>* {
+    margin-top: 0.5em;
+}
+
+#contact-form label {
+    text-transform: uppercase;
+    color: #f0f8ff;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.61px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 8px;
+    background-color: #ffffffa8;
+}
+
+#contact-form button {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+textarea {
+    resize: none;
+}
+
+#name-error,
+#email-error,
+#message-error {
+    color: red;
+    padding: 3px 9px;
+    min-height: 1.5em;
+}
+
+#skills>ul {
+    list-style-type: none;
+    list-style-position: inside;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#experience ul,
+#certifications ul {
+    list-style-position: inside;
+}
+
+/* Chip like tag styles for frameworks, etc */
+.tag {
+    background-color: #439a86ff;
+    border-radius: 18px;
+    width: max-content;
+    padding: 6px 20px;
+    margin: 6px;
+    font-size: 12px;
+    color: white;
+    position: relative;
+}
+
+.tag:hover {
+    box-shadow: 0px 0px 3px grey;
+}
+
+.tag.js {
+    background-color: rgb(240, 219, 79);
+    color: black;
+    animation: moving 10s infinite forwards;
+}
+
+.tag.html {
+    background-color: (241, 101, 41);
+    color: black
+}
+
+.tag.css {
+    background-color: rgb(38, 77, 228);
+    color: #fff;
+}
+
+.tag.react {
+    background-color: rgb(97, 219, 251);
+    color: white
+}
+
+.tag.react-native {
+    background-color: rgb(97, 219, 251);
+    color: white;
+}
+
+.tag.redux {
+    background-color: rgb(118, 74, 188);
+    color: white;
+}
+
+.tag.mysql {
+    background-color: rgb(242, 145, 17);
+    color: rgb(0, 117, 143);
+    animation: moving-randomly 10s infinite forwards;
+}
+
+.tag.mongodb {
+    background-color: rgb(77, 179, 61);
+    color: rgb(232, 231, 213);
+}
+
+.tag.java {
+    background-color: rgb(237, 139, 0);
+    /* color: rgb(0, 115, 150); */
+    color: white;
+}
+
+.tag.spring {
+    background-color: rgb(109, 179, 63);
+    color: white;
+}
+
+.tag.liquibase {
+    background-color: rgb(40, 98, 255);
+    color: white;
+}
+
+.tag.php {
+    background-color: rgb(71, 74, 138);
+    color: white;
+}
+
+.tag.material-ui {
+    background-color: rgb(117, 124, 232);
+    color: white;
+}
+
+.tag.bootstrap {
+    background-color: rgb(86, 61, 124);
+    color: white;
+}
+
+.tag.scrum {
+    background-color: rgb(64, 88, 111);
+    /* color: rgb(0, 128, 128); */
+    color: white;
+}
+
+.tag.sass {
+    background-color: rgb(205, 103, 153);
+    color: white;
+}
+
+.flag::before {
+    margin-right: 4px;
+}
+
+#languages {
+    border-radius: 20px;
+    background-color: blueviolet;
+}
+
+#languages ul {
+    list-style-type: none;
+}
+
+#languages li {
+    padding: 8px 0;
+    border-radius: 20px;
+}
+
+.flag {
+    font-size: 10px;
+}
+
+.flag.active {
+    box-shadow: 0 0 2px green;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+.flag.arg::before {
+    content: url('./../assets/ar-flag.svg');
+    max-width: 5px;
+    width: 5px;
+    height: 10px;
+}
+
+.flag.eng::before {
+    content: url('./../assets/gb-flag.svg');
+}
+
+/* Footer*/
+footer {
+    background-color: aliceblue;
+    color: black;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 1em;
+    border-top: 1px solid black;
+}
+
+footer nav,
+header nav {
+    display: inline-flex;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+footer>* {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Mobile */
+.mobile-only {
+    display: none;
+}
+
+/* Icons */
+.icon {
+    height: 32px;
+    width: 32px;
+    display: block;
+    transition: all .65s;
+}
+
+.icon::after {
+    color: #fcde67;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+    scale: 0.4;
+    transition: all .65s;
+}
+
+.icon:hover::after {
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.8em;
+    scale: 1;
+}
+
+.icon.home {
+    background: url('./../assets/icons8-home.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon.home:hover {
+    background: none;
+}
+
+.icon.home:hover::after {
+    content: "HOME";
+    color: #fcde67;
+}
+
+.icon.about-me {
+    background: url('./../assets/icons8-account-50.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon.about-me:hover {
+    background: none;
+}
+
+.icon.about-me:hover::after {
+    content: "ABOUT";
+    color: #fcde67;
+}
+
+.icon.projects {
+    background: url('./../assets/icons8-folder.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon.projects:hover {
+    background: none;
+}
+
+.icon.projects:hover::after {
+    content: "PROJECTS";
+    color: #fcde67;
+}
+
+.icon.contact {
+    background: url('./../assets/icons8-contact-50.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon.contact:hover {
+    background: none;
+}
+
+.icon.contact:hover::after {
+    content: "CONTACT";
+    color: #fcde67;
+}
+
+.icon.github {
+    background: url('./../assets/icons8-github-50.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon.linkedin {
+    background: url('./../assets/icons8-linkedin-rodeado-de-círculo.svg');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.icon.cv {
+    background: url('./../assets/resume-portfolio-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.icon.uparrow {
+    background: url('./../assets/icons8-up-arrow-50.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    transition: all .45s;
+}
+
+.open-menu::after {
+    content: ' ';
+    scale: 1;
+    height: 46px;
+    width: 46px;
+    display: block;
+    animation: flip-sign-back 0.75s ease-in forwards;
+}
+
+.open-menu.opened::after {
+    animation: flip-sign 0.75s ease-in forwards;
+}
+
+.social-btn.round-button {
+    padding: 0;
+    background-color: transparent;
+}
+
+.socials::after {
+    background: url('./../assets/eye-open-svgrepo-com.svg') no-repeat center;
+    content: ' ';
+    scale: 1;
+    height: 46px;
+    width: 46px;
+    transition: flip-sign 0.3s;
+    display: block;
+    z-index: 1;
+}
+
+.socials.opened::after {
+    background: url('./../assets/duotone-eye-closed-svgrepo-com.svg') no-repeat center;
+}
+
+#contact-form .send-button {
+    width: min-content;
+    align-self: end;
+    transition: all .75s;
+    padding: 0.5em 2.5em;
+}
+
+.send-button::before {
+    display: block;
+    content: "Send";
+    transition: all .75s;
+}
+
+#contact-form .send-button:hover {
+    transform: rotateY(180deg);
+    animation: 0.85s linear button-background-change forwards;
+}
+
+.send-button:hover::before {
+    transform: rotateY(-180deg);
+}
+
+.round-button {
+    border-radius: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    transition: all .65s;
+}
+
+.round-button:hover {
+    background-color: #fcde67;
+    transform: rotate(360deg);
+}
+
+/* Animations */
+@keyframes moving {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    30% {
+        top: 50px;
+    }
+
+    68%,
+    72% {
+        left: 50px;
+    }
+
+    100% {
+        top: 100px;
+        left: 100%;
+    }
+}
+
+/* TODO: Make this function in js to calculate values randomly 
+on page load and assign the result to the .tag elements */
+@keyframes moving-randomly {
+    10% {
+        top: 40px;
+    }
+
+    20% {
+        right: 30%;
+    }
+
+    30% {
+        top: -10px;
+        left: 15px;
+    }
+
+    40% {
+        bottom: 60px;
+    }
+
+    100% {
+        top: 0;
+        right: 0;
+    }
+}
+
+@keyframes flip-over {
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes flip-sign {
+    0% {
+        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+    }
+
+    70% {
+        /* transform: rotateY(220deg) rotateX(130deg); */
+        transform: rotateY(-220deg);
+    }
+
+    85% {
+        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+    }
+
+    100% {
+        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        /* transform: rotateY(0deg) rotateX(0deg); */
+        transform: rotateY(-36deg);
+    }
+}
+
+@keyframes flip-sign-back {
+    0% {
+        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+    }
+
+    70% {
+        /* transform: rotateY(220deg) rotateX(340deg); */
+        transform: rotateY(220deg);
+    }
+
+    85% {
+        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+    }
+
+    100% {
+        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        /* transform: rotateY(360deg) rotateX(360deg); */
+        transform: rotateY(360deg)
+    }
+}
+
+@keyframes button-background-change {
+    0% {
+        background: linear-gradient(100% gray);
+    }
+
+    /* 50% {
+        background: linear-gradient(100% #fcde67);
+    } */
+    100% {
+        background: #fcde67;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-only {
+        display: block;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    header {
+        background-color: aliceblue;
+        padding-left: 4px;
+        padding-right: 4px;
+        max-height: 70px;
+    }
+
+    header h1 {
+        color: #007991ff;
+        font-size: 2em;
+        transition: all 0.35s ease-in-out 0.23s;
+        position: relative;
+        top: 0;
+    }
+
+    header h1.opened {
+        color: #fcde67;
+        top: 50px;
+        scale: 2.41;
+    }
+
+    header #mobile-social {
+        z-index: 1;
+        transition: background 0.5s ease-in-out;
+    }
+
+    header #mobile-social.opened {
+        animation: flip-over 0.35s ease-in;
+    }
+
+    header #mobile-social.opened>button {
+        background-color: #fcde67ad;
+    }
+
+    header .right-section {
+        display: grid;
+        position: fixed;
+        right: 4px;
+        top: 35px;
+        background-color: #f0f8ff;
+        padding-top: 25px;
+        border-radius: 0 0 10px 10px;
+        height: 0;
+        width: 50px;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+
+    header .right-section.opened {
+        height: 150px;
+    }
+
+    header .right-section>a {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    #mobile-drawer {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: #f0f8ff;
+        justify-content: flex-start;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        text-align: center;
+        transition: all 0.65s;
+        z-index: 3;
+    }
+
+    #mobile-drawer.opened {
+        top: 0;
+        height: 100%;
+    }
+
+    #mobile-drawer ul {
+        font-weight: bold;
+        grid-template-columns: 1fr;
+        list-style-type: none;
+        padding-top: 60px;
+    }
+
+    #mobile-drawer ul li {
+        text-transform: uppercase;
+        margin-top: 2ch;
+        margin-bottom: 2ch;
+        font-size: 18px;
+        font-family: "Verdana, Geneva, Tahoma, sans-serif";
+    }
+
+    #mobile-drawer ul li:last-child {
+        display: inline-flex;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+
+    #mobile-drawer ul li a {
+        text-decoration: none;
+        color: #007991ff;
+        font-family: monospace;
+        letter-spacing: 1px;
+        font-size: 1.4em;
+    }
+
+    #mobile-drawer .icon {
+        width: 3em;
+        height: 3em;
+    }
+
+    main {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    main>section {
+        padding-top: 70px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    #home {
+        font-size: 2.5em;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #about {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #skills {
+        margin-top: 2ch;
+    }
+
+    #about>section {
+        width: 100%;
+    }
+
+    #projects .entries {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+    }
+
+    #projects .entry {
+        width: 100vw;
+        opacity: 1;
+    }
+
+    #contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 100px;
+    }
+
+    #contact div {
+        padding: 0;
+        text-align: center;
+    }
+
+    #contact a[href^="mailto"] {
+        display: none;
+    }
+
+    #contact #contact-form {
+        width: 90%;
+        margin: 3rem auto;
+    }
+
+    #contact-form .send-button {
+        align-self: center;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    footer .icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (width < 600px) {}
+
+@media screen and (width < 900px) {}
+
+@media screen and (width < 1200px) {}
+
+@media screen and (width < 1536px) {}
