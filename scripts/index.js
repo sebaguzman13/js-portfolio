@@ -9,6 +9,15 @@ window.onload = function () {
     }
   }
 
+  setTimeout(() => {
+    let base = 'sebaguzman13'
+    let dom = 'gmail.com'
+    let anchor = document.getElementById('contact').getElementsByTagName('a').item(0);
+    anchor.setAttribute('href', `mailto:${base}@${dom}`);
+    anchor.append(`${base}@${dom}`);
+
+    document.getElementById('contact-form').setAttribute('action', 'https://formsubmit.co/6ec6a26a5476f8441e0f9626d72ba8a7');
+  }, 4000);
 }
 
 

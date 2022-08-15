@@ -1,0 +1,335 @@
+/* Animations */
+
+@keyframes open-right {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes popup {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes come-from-right {
+    0% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes grow-up {
+    100% {
+        transform: scale(1.35);
+    }
+}
+
+@keyframes move-up {
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+@keyframes float-vertical {
+    25% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-vertical-2 {
+    25% {
+        transform: translateY(15px);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-vertical-3 {
+    25% {
+        transform: translateY(9px);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-sideways {
+    20% {
+        transform: translateX(-15px) translateY(5px);
+    }
+
+    50% {
+        transform: translateX(12px) translateY(-12px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes float-sideways-2 {
+    20% {
+        transform: translateX(12px) translateY(15px);
+    }
+
+    50% {
+        transform: translateX(-15px)translateY(-6px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(5px);
+    }
+}
+
+@keyframes float-sideways-3 {
+    20% {
+        transform: translateX(-10px) translateY(9px);
+    }
+
+    50% {
+        transform: translateX(18px) translateY(-7px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes float-sideways-4 {
+    20% {
+        transform: translateX(-10px) translateY(-9px);
+    }
+
+    35% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(0) translateY(1px);
+    }
+
+    73% {
+        transform: translateX(18);
+    }
+
+    80% {
+        transform: translateX(18px) translateY(-10px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes come-in-and-float {
+    0% {
+        transform: translateX(100vw) translateY(35vh);
+    }
+
+    10% {
+        transform: translateX(15vw) translateY(55vh);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes come-in-and-float-2 {
+    0% {
+        transform: translateX(100vw) translateY(25vh);
+    }
+
+    15% {
+        transform: translateX(10vw) translateY(37vh);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+/* About section: Skill chips animations */
+@keyframes moving {
+    0% {
+        transform: scale(0);
+        top: 0;
+        left: 0;
+    }
+
+    15% {
+        transform: scale(1);
+    }
+
+    30% {
+        top: 50px;
+        left: 50px;
+    }
+
+    68% {
+        left: 23px;
+    }
+
+    76% {
+        top: 100px;
+        left: -5px;
+    }
+
+    100% {
+        top: -25px;
+        scale: 1.32;
+    }
+}
+
+/* TODO: Make this function in js to calculate values randomly 
+on page load and assign the result to the .tag elements */
+@keyframes moving-randomly {
+    10% {
+        top: 40px;
+    }
+
+    20% {
+        right: 30%;
+    }
+
+    30% {
+        top: -10px;
+        left: 15px;
+    }
+
+    40% {
+        bottom: 60px;
+    }
+
+    100% {
+        top: 0;
+        right: 0;
+    }
+}
+
+@keyframes flip-over {
+    100% {
+        rotate: 360deg;
+    }
+}
+
+/* Mobile menu button animations */
+@keyframes flip-sign {
+    0% {
+        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+    }
+
+    70% {
+        transform: rotateY(-220deg);
+    }
+
+    85% {
+        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+    }
+
+    100% {
+        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        transform: rotateY(-36deg);
+    }
+}
+
+@keyframes flip-sign-back {
+    0% {
+        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+    }
+
+    70% {
+        transform: rotateY(220deg);
+    }
+
+    85% {
+        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+    }
+
+    100% {
+        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        transform: rotateY(360deg)
+    }
+}
+
+/* Form submit button animation */
+@keyframes button-background-change {
+    0% {
+        background: linear-gradient(100% gray);
+    }
+
+    100% {
+        background: #fcde67;
+    }
+}
+
+/* Home light-bulb animation */
+@keyframes bulb-animation {
+    0% {
+        transform: translateY(-15px) rotateY(0);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    70% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        top: 0;
+        transform: rotateY(-720deg) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Home text animation */
+@keyframes drop-letter {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px) translateX(-5px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+}

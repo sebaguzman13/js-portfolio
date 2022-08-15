@@ -1,3 +1,10 @@
+/* Mobile Styles */
+@media screen and (max-width: 600px) {}
+
+/* Tablet Styles */
+@media screen and (max-width: 900px) {}
+
+/* Desktop Styles */
 * {
     padding: 0;
     margin: 0;
@@ -17,7 +24,7 @@ body {
 
 /* Header */
 header {
-    background-color: rgba(238, 186, 186, 0.075);
+    background-color: aliceblue;
     color: black;
     position: fixed;
     top: 0;
@@ -40,7 +47,7 @@ nav>a {
 header h1 {
     align-self: center;
     font-size: 1.2em;
-    color: #fcde67;
+    color: #222e50ff;
 }
 
 .menu-btn {
@@ -57,6 +64,11 @@ footer .right-section {
     justify-content: space-around;
     width: 20%;
     max-width: 150px;
+}
+
+.right-section a:hover {
+    border-radius: 100%;
+    border: 2px solid rgba(0, 121, 145, .7)
 }
 
 /* Aside */
@@ -95,6 +107,19 @@ main>section {
     color: #fcde67;
 }
 
+#home h3 {
+    animation: drop-letter 1s ease-in-out forwards;
+}
+
+#home .carrer-line {
+    position: relative;
+    left: 40vw;
+    height: 0.5rem;
+    background: linear-gradient(90deg, #fcde67, white);
+    width: 0;
+    animation: open-right 4.5s ease 2s forwards;
+}
+
 /* About section*/
 #about {
     flex-flow: row;
@@ -124,15 +149,14 @@ main>section {
     font-size: 2.5em;
     color: #fcde67;
     text-transform: uppercase;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat';
 }
 
 #projects .entries {
     margin-top: 6rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10%;
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5%;
     overflow: visible;
 }
 
@@ -141,7 +165,7 @@ main>section {
     background: linear-gradient(transparent 60%, #80808052 95%);
     transition: all 0.45s;
     opacity: 0.45;
-    max-width: 300px;
+    /* max-width: 300px; */
     margin: 0 auto;
 }
 
@@ -149,7 +173,6 @@ main>section {
     background: linear-gradient(transparent 35%, #439a86aa 95%);
     opacity: 1;
     scale: 1.05;
-    /* box-shadow: 0 3px 10px rgb(95, 95, 95) ; */
 }
 
 #projects .entry img {
@@ -192,7 +215,7 @@ main>section {
     font-size: 1.8em;
     color: #fcde67;
     text-transform: uppercase;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat';
 }
 
 #contact .subtitle {
@@ -209,24 +232,28 @@ main>section {
 
 #contact div p {
     color: black;
+    font-size: 1rem;
 }
 
 #contact a[href^="mailto"] {
-    display: inline-flex;
-    align-items: center;
+    position: relative;
+    top: -8px;
     text-decoration: none;
     color: #fcde67;
-    margin-top: 4rem;
     letter-spacing: 0.72px;
     font-family: 'Courier New', Courier, monospace;
+    transition: all .45s;
 }
 
-#contact a[href^="mailto"]::before {
-    content: url("./../assets/icons8-mail-50.png");
-    text-decoration: none;
+#contact .envelope-wrapper {
+    flex-flow: row;
+    margin-top: 4rem;
+}
+
+.envelope {
     display: inline-flex;
-    height: 1.5em;
-    width: 2.5em;
+    height: 1.5rem;
+    margin-right: 2ch;
 }
 
 #contact #contact-form {
@@ -243,7 +270,6 @@ main>section {
 #contact-form label {
     text-transform: uppercase;
     color: #f0f8ff;
-    font-family: 'Courier New', Courier, monospace;
     letter-spacing: 0.61px;
 }
 
@@ -251,6 +277,9 @@ main>section {
 #contact-form textarea {
     padding: 8px;
     background-color: #ffffffa8;
+    border-radius: 10px;
+    border-top: 2px inset rgba(58, 58, 58, .7);
+    border-left: 2px inset rgba(58, 58, 58, .7);
 }
 
 #contact-form button {
@@ -277,6 +306,10 @@ textarea {
     flex-wrap: wrap;
 }
 
+#skills> ul li {
+    margin: 16px;
+}
+
 #experience ul,
 #certifications ul {
     list-style-position: inside;
@@ -298,88 +331,109 @@ textarea {
     box-shadow: 0px 0px 3px grey;
 }
 
+.tag.teamwork {
+    animation: float-sideways 4s ease-out infinite both;
+}
+
 .tag.js {
     background-color: rgb(240, 219, 79);
     color: black;
-    animation: moving 10s infinite forwards;
+    animation: moving 10s forwards, float-sideways-4 7s ease infinite forwards;
 }
 
 .tag.html {
     background-color: (241, 101, 41);
-    color: black
+    color: black;
+    animation: float-sideways-2 4s ease-out infinite both;
 }
 
 .tag.css {
     background-color: rgb(38, 77, 228);
     color: #fff;
+    animation: float-sideways 4s ease-out infinite both;
 }
 
 .tag.react {
     background-color: rgb(97, 219, 251);
-    color: white
+    color: white;
+    animation: come-in-and-float 9s ease-out 3s forwards, float-vertical 5s ease-in-out infinite;
 }
 
 .tag.react-native {
     background-color: rgb(97, 219, 251);
     color: white;
+    animation: come-in-and-float-2 4s ease 6.8s forwards, float-vertical-3 5s ease-in-out infinite;
 }
 
 .tag.redux {
     background-color: rgb(118, 74, 188);
     color: white;
+    animation: come-in-and-float 10.7s ease 4.6s forwards, float-vertical-2 7s ease-in-out infinite;
 }
 
 .tag.mysql {
     background-color: rgb(242, 145, 17);
     color: rgb(0, 117, 143);
-    animation: moving-randomly 10s infinite forwards;
+    animation: moving-randomly 10s infinite 3s forwards, float-vertical 5s ease-in-out infinite;
 }
 
 .tag.mongodb {
     background-color: rgb(77, 179, 61);
     color: rgb(232, 231, 213);
+    animation: come-in-and-float 7s ease-in 5s, float-sideways-3 7s ease-out infinite both;
 }
 
 .tag.java {
     background-color: rgb(237, 139, 0);
-    /* color: rgb(0, 115, 150); */
     color: white;
+    animation: popup 6s ease-out forwards, float-sideways-2 4s ease-out infinite both;
 }
 
 .tag.spring {
     background-color: rgb(109, 179, 63);
     color: white;
+    animation: 
+    come-in-and-float 9.3s ease-in-out forwards
+    float-sideways 5s ease-in-out, 
+    float-vertical-3 15s ease-in-out, 
+    grow-up 6s ease-in-out 5s forwards, 
+    float-sideways 5s ease-in-out infinite;
 }
 
 .tag.liquibase {
     background-color: rgb(40, 98, 255);
     color: white;
+    animation: popup 3s ease-in forwards, float-sideways-2 5s ease-in-out infinite both;
 }
 
 .tag.php {
     background-color: rgb(71, 74, 138);
     color: white;
+    animation: come-from-right 10s ease-out forwards, float-sideways 7s infinite forwards;
 }
 
 .tag.material-ui {
     background-color: rgb(117, 124, 232);
     color: white;
+    animation: come-in-and-float 14.3s ease-in-out forwards, float-sideways 14s ease-out infinite both;
 }
 
 .tag.bootstrap {
     background-color: rgb(86, 61, 124);
     color: white;
+    animation: come-in-and-float-2 16.3s ease-in-out forwards, float-sideways-4 14s ease-out infinite both;
 }
 
 .tag.scrum {
     background-color: rgb(64, 88, 111);
-    /* color: rgb(0, 128, 128); */
     color: white;
+    animation: come-in-and-float-2 8s ease-in-out forwards, 5.5s ease-out infinite both;
 }
 
 .tag.sass {
     background-color: rgb(205, 103, 153);
     color: white;
+    animation: come-in-and-float 18s ease-in-out forwards, float-sideways-3 4s ease-out infinite both;
 }
 
 .flag::before {
@@ -387,6 +441,7 @@ textarea {
 }
 
 #languages {
+    display: none;
     border-radius: 20px;
     background-color: blueviolet;
 }
@@ -444,6 +499,10 @@ footer>* {
     margin-bottom: 10px;
 }
 
+footer>p a {
+    text-decoration: none;
+}
+
 /* Mobile */
 .mobile-only {
     display: none;
@@ -486,7 +545,7 @@ footer>* {
 
 .icon.home:hover::after {
     content: "HOME";
-    color: #fcde67;
+    color: #222e50ff;
 }
 
 .icon.about-me {
@@ -501,7 +560,7 @@ footer>* {
 
 .icon.about-me:hover::after {
     content: "ABOUT";
-    color: #fcde67;
+    color: #222e50ff;
 }
 
 .icon.projects {
@@ -516,7 +575,7 @@ footer>* {
 
 .icon.projects:hover::after {
     content: "PROJECTS";
-    color: #fcde67;
+    color: #222e50ff;
 }
 
 .icon.contact {
@@ -531,7 +590,7 @@ footer>* {
 
 .icon.contact:hover::after {
     content: "CONTACT";
-    color: #fcde67;
+    color: #222e50ff;
 }
 
 .icon.github {
@@ -541,7 +600,7 @@ footer>* {
 }
 
 .icon.linkedin {
-    background: url('./../assets/icons8-linkedin-rodeado-de-círculo.svg');
+    background: url('./../assets/icons8-linkedin.svg');
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
@@ -559,9 +618,25 @@ footer>* {
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
+    margin: 5px;
     width: 50px;
     height: 50px;
     transition: all .45s;
+}
+
+.icon.uparrow:hover {
+    transform: rotate(360deg);
+}
+
+.icon.light-bulb {
+    background: url('./../assets/light-bulb-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    animation: bulb-animation 1.5s ease-in .35s forwards;
+    opacity: 0;
 }
 
 .open-menu::after {
@@ -611,12 +686,11 @@ footer>* {
 }
 
 #contact-form .send-button:hover {
-    transform: rotateY(180deg);
     animation: 0.85s linear button-background-change forwards;
 }
 
 .send-button:hover::before {
-    transform: rotateY(-180deg);
+    transform: rotateY(-360deg);
 }
 
 .round-button {
@@ -629,117 +703,10 @@ footer>* {
 
 .round-button:hover {
     background-color: #fcde67;
-    transform: rotate(360deg);
 }
 
 /* Animations */
-@keyframes moving {
-    0% {
-        top: 0;
-        left: 0;
-    }
 
-    30% {
-        top: 50px;
-    }
-
-    68%,
-    72% {
-        left: 50px;
-    }
-
-    100% {
-        top: 100px;
-        left: 100%;
-    }
-}
-
-/* TODO: Make this function in js to calculate values randomly 
-on page load and assign the result to the .tag elements */
-@keyframes moving-randomly {
-    10% {
-        top: 40px;
-    }
-
-    20% {
-        right: 30%;
-    }
-
-    30% {
-        top: -10px;
-        left: 15px;
-    }
-
-    40% {
-        bottom: 60px;
-    }
-
-    100% {
-        top: 0;
-        right: 0;
-    }
-}
-
-@keyframes flip-over {
-    100% {
-        rotate: 360deg;
-    }
-}
-
-@keyframes flip-sign {
-    0% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
-    }
-
-    70% {
-        /* transform: rotateY(220deg) rotateX(130deg); */
-        transform: rotateY(-220deg);
-    }
-
-    85% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
-    }
-
-    100% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
-        /* transform: rotateY(0deg) rotateX(0deg); */
-        transform: rotateY(-36deg);
-    }
-}
-
-@keyframes flip-sign-back {
-    0% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
-    }
-
-    70% {
-        /* transform: rotateY(220deg) rotateX(340deg); */
-        transform: rotateY(220deg);
-    }
-
-    85% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
-    }
-
-    100% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
-        /* transform: rotateY(360deg) rotateX(360deg); */
-        transform: rotateY(360deg)
-    }
-}
-
-@keyframes button-background-change {
-    0% {
-        background: linear-gradient(100% gray);
-    }
-
-    /* 50% {
-        background: linear-gradient(100% #fcde67);
-    } */
-    100% {
-        background: #fcde67;
-    }
-}
 
 @media screen and (max-width: 600px) {
     .mobile-only {
@@ -767,12 +734,16 @@ on page load and assign the result to the .tag elements */
         transition: all 0.35s ease-in-out 0.23s;
         position: relative;
         top: 0;
+        letter-spacing: -4px;
+        animation: drop-letter 1s ease-in-out 0.35s forwards;
     }
 
     header h1.opened {
         color: #fcde67;
         top: 50px;
         scale: 2.41;
+        letter-spacing: -5px;
+        text-shadow: 1px -1px 1px #007991ff;
     }
 
     header #mobile-social {
@@ -800,6 +771,11 @@ on page load and assign the result to the .tag elements */
         width: 50px;
         overflow: hidden;
         transition: all 0.5s;
+    }
+
+    .right-section a:hover {
+        border-radius: 100%;
+        border: 2px solid rgba(0, 121, 145, .7)
     }
 
     header .right-section.opened {
@@ -856,7 +832,6 @@ on page load and assign the result to the .tag elements */
     #mobile-drawer ul li a {
         text-decoration: none;
         color: #007991ff;
-        font-family: monospace;
         letter-spacing: 1px;
         font-size: 1.4em;
     }
@@ -885,6 +860,11 @@ on page load and assign the result to the .tag elements */
         padding-right: 1rem;
     }
 
+    .icon.light-bulb {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
     #about {
         display: grid;
         grid-template-columns: 1fr;
@@ -893,6 +873,7 @@ on page load and assign the result to the .tag elements */
 
     #skills {
         margin-top: 2ch;
+        overflow-x: visible;
     }
 
     #about>section {
@@ -905,7 +886,7 @@ on page load and assign the result to the .tag elements */
     }
 
     #projects .entry {
-        width: 100vw;
+        width: 100%;
         opacity: 1;
     }
 
@@ -940,11 +921,3 @@ on page load and assign the result to the .tag elements */
         height: 50px;
     }
 }
-
-@media screen and (width < 600px) {}
-
-@media screen and (width < 900px) {}
-
-@media screen and (width < 1200px) {}
-
-@media screen and (width < 1536px) {}
