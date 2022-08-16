@@ -9,6 +9,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 html {
@@ -64,6 +66,10 @@ footer .right-section {
     justify-content: space-around;
     width: 20%;
     max-width: 150px;
+}
+
+.right-section a {
+    border: 2px solid rgba(0, 121, 145, 0)
 }
 
 .right-section a:hover {
@@ -206,7 +212,7 @@ main>section {
     justify-content: space-between;
 }
 
-#contact>p {
+#contact p {
     color: white;
     font-weight: bold;
 }
@@ -297,6 +303,17 @@ textarea {
     color: red;
     padding: 3px 9px;
     min-height: 1.5em;
+}
+
+#about {
+    overflow-y: hidden;
+    overflow-x: visible;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+}
+
+#about::-webkit-scrollbar {
+    display: none;
 }
 
 #skills>ul {
@@ -771,6 +788,10 @@ footer>p a {
         width: 50px;
         overflow: hidden;
         transition: all 0.5s;
+    }
+
+    .right-section a {
+        border: 2px solid rgba(0, 121, 145, 0)
     }
 
     .right-section a:hover {

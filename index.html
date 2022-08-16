@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="" description="" />
-    <meta name="" description="" />
+    <meta name="author" content="Sebastian Javier Guzman" />
+    <meta name="copyright" content="Free to use" />
+    <meta name="keywords" description="portfolio, html, js vainilla, web development, css animations" />
+    <meta name="description"
+        description="SJG's Personal Portfolio, built entirely in HTML55, CSS3 and JS Vainilla. Creating solid foundations for the projects to come." />
     <meta name="charset" description="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sebastian Javier Guzman - React Dev</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>SJG Web Dev</title>
+    <!-- Mobile styles -->
     <link rel="stylesheet" href="./styles/index.css" />
+    <!-- Tablet styles -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- Desktop styles -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <!-- CSS Animations -->
+    <link rel="stylesheet" href="./styles/animations.css" />
 </head>
 
 <body>
     <header>
         <button class="mobile-only menu-btn" onclick="toggleMenu()"><i id="menu-btn" class="open-menu"></i></button>
-        <h1 class="hide-mobile">
-            Sebastian J Guzman
-        </h1>
-        <h1 id="mobile-h1" class="mobile-only">
-            SJG
+        <h1 id="mobile-h1">
+            <span class="first-letter">S</span><span class="hide-mobile">ebastian</span> J <span
+                class="last-letter">G</span><span class="hide-mobile">uzman</span>
         </h1>
         <nav class="hide-mobile">
             <a href="#home" rel="bookmark"><i class="icon home"></i></a>
@@ -32,7 +44,8 @@
 
             <a href="https://linkedin.com/in/sebastian-javier-guzman" rel="external"><i class="icon linkedin"></i></a>
 
-            <a href="#" rel="author noreferrer noopener" target="_blank"><i class="icon cv"></i></a>
+            <a href="./assets/Sebastian-Javier-Guzman.pdf" rel="author noreferrer noopener" target="_blank"><i
+                    class="icon cv"></i></a>
         </section>
         <section class="mobile-only" id="mobile-social">
             <button class="round-button social-btn" onclick="toggleSocialMenu()"><i id="social-menu"
@@ -40,7 +53,7 @@
         </section>
     </header>
     <aside>
-        <section id="languages" style="display: none">
+        <section id="languages">
             <ul>
                 <li class="flag arg"><i>ESP</i></li>
                 <li class="flag eng active"><i>ENG</i></li>
@@ -65,17 +78,20 @@
                 <li>
                     <a href="https://github.com/sebaguzman13" rel="author external"><i class="icon github"></i></a>
 
-                    <a href="https://linkedin.com/in/sebastian-javier-guzman" rel="author external"><i class="icon linkedin"></i></a>
-                    <!-- TODO ADD CV DOWNLOAD-->
-                    <a  rel="author noreferrer noopener" target="_blank"><i class="icon cv"></i></a>
+                    <a href="https://linkedin.com/in/sebastian-javier-guzman" rel="author external"><i
+                            class="icon linkedin"></i></a>
+
+                    <a rel="author noreferrer noopener" target="_blank"><i class="icon cv"></i></a>
                 </li>
             </ul>
 
         </section>
         <section id="home">
-            <h3>Web Development from idea to carrer</h3>
+            <h3>Web Development from<br /><i class="icon light-bulb"></i><span style="display: none">i</span>dea to
+                carrer</h3>
+                <div class="carrer-line"></div>
         </section>
-        <!-- About Me Personal description -->
+
         <section id="about">
             <section id="description">
                 <p>
@@ -84,19 +100,15 @@
                 </p>
             </section>
             <section id="skills">
-                <h4 class="hide-mobile">Skills</h4>
-                <p class="hide-mobile">Intermediate</p>
                 <ul>
-                    <li class="tag ">teamwork</li>
+                    <li class="tag teamwork">Teamwork</li>
                     <li class="tag js">javascript</li>
                     <li class="tag java">java</li>
                     <li class="tag mysql">MySQL</li>
                     <li class="tag react">React js</li>
                     <li class="tag material-ui">Material UI</li>
                     <li class="tag bootstrap">Bootstrap</li>
-                </ul>
-                <p class="hide-mobile">Basic</p>
-                <ul>
+
                     <li class="tag mongodb">MongoDB</li>
                     <li class="tag react-native">React Native</li>
                     <li class="tag redux">Redux</li>
@@ -104,61 +116,64 @@
                     <li class="tag sass">SaSS</li>
                     <li class="tag scrum">Scrum</li>
                     <li class="tag liquibase">liquibase</li>
+                    <li class="tag spring">Spring</li>
                 </ul>
             </section>
         </section>
 
-        <!-- My online projects -->
         <section id="projects">
             <h3>Projects</h3>
-            <div class="entries">
-                <div class="entry">
+            <section class="entries">
+                <article class="entry">
                     <a href="https://sjg-project-manager.netlify.app/">
                         <img src="./assets/project-manager.png" alt="Project Manager" />
                     </a>
                     <a href="https://sjg-project-manager.netlify.app/">Project Manager</a>
                     <p>Projects CRUD Manager, update Status, Manager and person in charge of the project.</p>
-                </div>
+                </article>
 
-                <div class="entry">
+                <article class="entry">
                     <a href="https://zilean-counter.netlify.app/">
                         <img src="./assets/zilean.png" alt="Zilean Counter" />
                     </a>
                     <a href="https://zilean-counter.netlify.app/">Zilean Counter</a>
                     <p>Counter inspired on the Champion Zilean</p>
-                </div>
+                </article>
 
-                <div class="entry">
+                <article class="entry">
                     <a href="https://www.ticketon.com/">
                         <img src="./assets/ticketon-o.png" alt="Ticketon" />
                     </a>
                     <a href="https://www.ticketon.com/">Ticketon</a>
                     <p>Event handler and Ticket selling application</p>
-                </div>
+                </article>
 
-                <div class="entry">
+                <article class="entry">
                     <a href="https://tbtm.app/">
                         <img src="./assets/tbtm-mic.png" alt="Take back the mic" />
                     </a>
                     <a href="https://tbtm.app/">Tbtm</a>
                     <p>Take Back The Mic - Upload your art, share it with your friends amp it, and win the annual
                         contest !</p>
-                </div>
-            </div>
+                </article>
+            </section>
         </section>
 
-        <!-- Insert Projects Here -->
         <section id="contact">
-            <div>
+            <section>
                 <h3>Contact</h3>
                 <p class="subtitle">Got an idea to build?</p>
                 <p class="hide-mobile">
-                    Send me an email with your application thoughts and we'll make it real.
+                    Send me a message with your application thoughts and we'll make it real.
                 </p>
-                <a href="mailto:seba.guzman13@gmail.com">seba.guzman13@gmail.com</a>
-            </div>
+                <section class="envelope-wrapper">
+                    <img src="./assets/icons8-mail-50.png" alt="email" class="envelope hide-mobile"/><a href=""></a>
+                </section>
+            </section>
 
-            <form id="contact-form" action="">
+            <form id="contact-form" action="FORM_ACTION_URI" method="POST">
+                <input type="hidden" name="_subject" value="New Portfolio contact">
+
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" required />
                 <p id="name-error"></p>
@@ -171,7 +186,11 @@
                 <textarea id="message" name="message" rows="6" required></textarea>
                 <p id="message-error"></p>
 
-                <button class="send-button"></button>
+                <input type="hidden" name="_next" value="DEPLOY_URL">
+                <input type="text" name="_honey" class="honey-pot">
+                <input type="hidden" name="_autoresponse"
+                    value="Thank you for reaching out, I'll get in touch as soon as I can">
+                <button class="send-button" type="submit"></button>
             </form>
         </section>
         <button onclick="scrollToTop()" class="round-button"><i class="icon uparrow"></i></button>
@@ -182,11 +201,12 @@
 
             <a href="https://linkedin.com/in/sebastian-javier-guzman"><i class="icon linkedin"></i></a>
 
-            <a href="#"><i class="icon cv"></i></a>
+            <a href="./assets/Sebastian-Javier-Guzman.pdf" rel="author noreferrer noopener" target="_blank"><i
+                    class="icon cv"></i></a>
         </section>
-        <p>2022 SebastianJGuzman - Free to Use</p>
+        <p>2022 SebastianJGuzman - <a href="https://github.com/sebaguzman13/js-portfolio">Free to Use</a></p>
     </footer>
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/index.js" type="text/javascript"></script>
 </body>
 
 </html>
