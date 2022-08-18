@@ -80,32 +80,32 @@ function fillHomeLegend() {
   
   let delayInMs = 500;
   
-  // toInsert.forEach((e, index) => {
-  //   setTimeout(() => {
-  //     if (typeof(e) === 'string') {
-  //       legendNode.appendChild(document.createTextNode(e));
-  //     } else {
-  //       legendNode.appendChild(e);
-  //     }
-  //   }, delayInMs + (index * 130))
-  // })
+  toInsert.forEach((e, index) => {
+    setTimeout(() => {
+      if (typeof(e) === 'string') {
+        legendNode.appendChild(document.createTextNode(e));
+      } else {
+        legendNode.appendChild(e);
+      }
+    }, delayInMs + (index * 130))
+  })
 
-  // setTimeout(() => {
-  //   legends[1].forEach((e, index) => {
-  //     setTimeout(() => {
-  //       if (typeof(e) === 'string') {
-  //         legendNode.appendChild(document.createTextNode(e));
-  //       } else {
-  //         legendNode.appendChild(e);
-  //       }
-  //     }, delayInMs + (index * 180))
-  // })
-  // }, 5300)
+  setTimeout(() => {
+    legends[1].forEach((e, index) => {
+      setTimeout(() => {
+        if (typeof(e) === 'string') {
+          legendNode.appendChild(document.createTextNode(e));
+        } else {
+          legendNode.appendChild(e);
+        }
+      }, delayInMs + (index * 180))
+  })
+  }, 5300)
 
-insertIntoElementWithDelay(toInsert, legendNode, 500);
-setTimeout(() => {
-  insertIntoElementWithDelay(legends[1], legendNode, 500)
-}, 5300)
+// insertIntoElementWithDelay(toInsert, legendNode, 500);
+// setTimeout(() => {
+//   insertIntoElementWithDelay(legends[1], legendNode, 500)
+// }, 5300)
 
 }
 
