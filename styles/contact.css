@@ -4,6 +4,7 @@
         display: grid;
         grid-template-columns: 1fr;
         padding-top: 100px;
+        align-content: stretch;
     }
 
     #contact section {
@@ -30,8 +31,8 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: 3rem auto;
         padding: 0 1rem;
+        align-content: stretch;
     }
 
     #contact-form .send-button {
@@ -142,15 +143,11 @@
     transition: all .45s;
 }
 
-
-
 .envelope {
     display: inline-flex;
     height: 1.5rem;
     margin-right: 2ch;
 }
-
-
 
 #contact-form>* {
     margin-top: 0.5em;
