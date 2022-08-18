@@ -1,11 +1,69 @@
 /* Mobile Styles */
 @media screen and (max-width: 600px) {
-    
+    #home {
+        font-size: 3.5em;
+        color: #fcde67;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #home h3 {
+        white-space: pre-wrap;
+        padding-left: 1.5ch;
+    }
+
+    .icon.light-bulb {
+        height: 6.5rem;
+        width: 6.5rem;
+        background: url('./../assets/light-bulb-svgrepo-com.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        animation: bulb-animation 1.5s ease-in .35s forwards, pull-down-and-back 1s ease-in 3s forwards;
+        opacity: 0;
+    }
+
+    #home .carrer-line {
+        position: relative;
+        left: 40vw;
+        height: 0.5rem;
+        background: linear-gradient(90deg, #fcde67, white);
+        width: 0;
+        animation: open-right 4.5s ease 10s forwards;
+    }
 }
 
 /* Tablet Styles */
-@media screen and (max-width: 900px) {
-
-}
+@media screen and (max-width: 900px) {}
 
 /* Desktop Styles */
+@media screen and (min-width: 901px) {
+    #home {
+        font-size: 6em;
+        color: #fcde67;
+    }
+
+    #home h3 {
+        animation: drop-letter 1s ease-in-out forwards;
+    }
+
+    #home .carrer-line {
+        position: relative;
+        left: 40vw;
+        height: 0.5rem;
+        background: linear-gradient(90deg, #fcde67, white);
+        width: 0;
+        animation: open-right 4.5s ease 2s forwards;
+    }
+
+    .icon.light-bulb {
+        background: url('./../assets/light-bulb-svgrepo-com.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100px;
+        width: 100px;
+        display: inline-block;
+        animation: bulb-animation 1.5s ease-in .35s forwards;
+        opacity: 0;
+    }
+}

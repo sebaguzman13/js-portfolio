@@ -11,11 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>SJG Web Dev</title>
-    <!-- Mobile styles -->
-    <link rel="stylesheet" href="./styles/index.css" />
-    <!-- Tablet styles -->
-    <link rel="stylesheet" href="./styles/index.css" />
-    <!-- Desktop styles -->
+    <!-- Styles -->
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/home.css" />
     <link rel="stylesheet" href="./styles/about.css" />
@@ -33,19 +29,18 @@
                 class="last-letter">G</span><span class="hide-mobile">uzman</span>
         </h1>
         <nav class="hide-mobile">
-            <a href="#home" rel="bookmark"><i class="icon home"></i></a>
-            <a href="#about" rel="bookmark"><i class="icon about-me"></i></a>
-            <a href="#projects" rel="bookmark"><i class="icon projects"></i></a>
-            <a href="#contact" rel="bookmark"><i class="icon contact"></i></a>
+            <a href="#home" rel="bookmark">HOME</a>
+            <a href="#about" rel="bookmark">ABOUT</a>
+            <a href="#projects" rel="bookmark">PROJECTS</a>
+            <a href="#contact" rel="bookmark">CONTACT</a>
         </nav>
 
         <section class="right-section hide-mobile" id="social-links">
-            <a href="https://github.com/sebaguzman13" rel="external"><i class="icon github"></i></a>
+            <a target="_blank" href="https://github.com/sebaguzman13" rel="external"><i class="icon github"></i></a>
 
-            <a href="https://linkedin.com/in/sebastian-javier-guzman" rel="external"><i class="icon linkedin"></i></a>
+            <a target="_blank" href="https://linkedin.com/in/sebastian-javier-guzman" rel="external"><i class="icon linkedin"></i></a>
 
-            <a href="./assets/Sebastian-Javier-Guzman.pdf" rel="author noreferrer noopener" target="_blank"><i
-                    class="icon cv"></i></a>
+            <a target="_blank" href="./assets/Sebastian-Javier-Guzman.pdf" rel="author noreferrer noopener"><i class="icon cv"></i></a>
         </section>
         <section class="mobile-only" id="mobile-social">
             <button class="round-button social-btn" onclick="toggleSocialMenu()"><i id="social-menu"
@@ -76,19 +71,20 @@
                     <a href="#contact" rel="bookmark">CONTACT</a>
                 </li>
                 <li>
-                    <a href="https://github.com/sebaguzman13" rel="author external"><i class="icon github"></i></a>
+                    <a target="_blank" href="https://github.com/sebaguzman13" rel="author external"><i class="icon github"></i></a>
 
-                    <a href="https://linkedin.com/in/sebastian-javier-guzman" rel="author external"><i
+                    <a target="_blank" href="https://linkedin.com/in/sebastian-javier-guzman" rel="author external"><i
                             class="icon linkedin"></i></a>
 
-                    <a rel="author noreferrer noopener" target="_blank"><i class="icon cv"></i></a>
+                    <a target="_blank" rel="author noreferrer noopener"><i class="icon cv"></i></a>
                 </li>
             </ul>
 
         </section>
         <section id="home">
-            <h3>Web Development from<br /><i class="icon light-bulb"></i><span style="display: none">i</span>dea to
-                carrer</h3>
+            <!-- <h3>Web Development from<br /><i class="icon light-bulb"></i><span style="display: none">i</span>dea to
+                carrer</h3> -->
+                <h3></h3>
                 <div class="carrer-line"></div>
         </section>
 
@@ -125,37 +121,43 @@
             <h3>Projects</h3>
             <section class="entries">
                 <article class="entry">
-                    <a href="https://sjg-project-manager.netlify.app/">
+                    <a target="_blank" href="https://sjg-project-manager.netlify.app/">
                         <img src="./assets/project-manager.png" alt="Project Manager" />
                     </a>
-                    <a href="https://sjg-project-manager.netlify.app/">Project Manager</a>
+                    <a target="_blank" href="https://sjg-project-manager.netlify.app/">Project Manager</a>
                     <p>Projects CRUD Manager, update Status, Manager and person in charge of the project.</p>
                 </article>
 
                 <article class="entry">
-                    <a href="https://zilean-counter.netlify.app/">
+                    <a target="_blank" href="https://zilean-counter.netlify.app/">
                         <img src="./assets/zilean.png" alt="Zilean Counter" />
                     </a>
-                    <a href="https://zilean-counter.netlify.app/">Zilean Counter</a>
+                    <a target="_blank" href="https://zilean-counter.netlify.app/">Zilean Counter</a>
                     <p>Counter inspired on the Champion Zilean</p>
                 </article>
 
                 <article class="entry">
-                    <a href="https://www.ticketon.com/">
+                    <a target="_blank" href="https://www.ticketon.com/">
                         <img src="./assets/ticketon-o.png" alt="Ticketon" />
                     </a>
-                    <a href="https://www.ticketon.com/">Ticketon</a>
+                    <a target="_blank" href="https://www.ticketon.com/">Ticketon</a>
                     <p>Event handler and Ticket selling application</p>
                 </article>
 
                 <article class="entry">
-                    <a href="https://tbtm.app/">
+                    <a target="_blank" href="https://tbtm.app/">
                         <img src="./assets/tbtm-mic.png" alt="Take back the mic" />
                     </a>
-                    <a href="https://tbtm.app/">Tbtm</a>
+                    <a target="_blank" href="https://tbtm.app/">Tbtm</a>
                     <p>Take Back The Mic - Upload your art, share it with your friends amp it, and win the annual
                         contest !</p>
                 </article>
+            </section>
+            <section class="project-indicator mobile-only">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
             </section>
         </section>
 
@@ -190,18 +192,18 @@
                 <input type="text" name="_honey" class="honey-pot">
                 <input type="hidden" name="_autoresponse"
                     value="Thank you for reaching out, I'll get in touch as soon as I can">
-                <button class="send-button" type="submit"></button>
+                <button class="send-button" type="submit">SEND</button>
             </form>
         </section>
         <button onclick="scrollToTop()" class="round-button"><i class="icon uparrow"></i></button>
     </main>
     <footer>
         <section class="right-section">
-            <a href="https://github.com/sebaguzman13"><i class="icon github"></i></a>
+            <a target="_blank" href="https://github.com/sebaguzman13"><i class="icon github"></i></a>
 
-            <a href="https://linkedin.com/in/sebastian-javier-guzman"><i class="icon linkedin"></i></a>
+            <a target="_blank" href="https://linkedin.com/in/sebastian-javier-guzman"><i class="icon linkedin"></i></a>
 
-            <a href="./assets/Sebastian-Javier-Guzman.pdf" rel="author noreferrer noopener" target="_blank"><i
+            <a target="_blank" href="./assets/Sebastian-Javier-Guzman.pdf" rel="author noreferrer noopener"><i
                     class="icon cv"></i></a>
         </section>
         <p>2022 SebastianJGuzman - <a href="https://github.com/sebaguzman13/js-portfolio">Free to Use</a></p>

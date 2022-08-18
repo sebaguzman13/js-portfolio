@@ -1,11 +1,194 @@
 /* Mobile Styles */
 @media screen and (max-width: 600px) {
-    
+    #about {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: stretch;
+    }
+
+    #about #description {
+        margin: 2ch auto;
+        padding-left: 1ch;
+        padding-right: 1ch;
+        font-size: 2em;
+        z-index: 2;
+    }
+
+    #skills {
+        overflow-x: visible;
+    }
+
+    #about>section {
+        width: 100%;
+    }
 }
 
 /* Tablet Styles */
-@media screen and (max-width: 900px) {
-
-}
+@media screen and (max-width: 900px) {}
 
 /* Desktop Styles */
+@media screen and (min-width: 901px) {
+    #about {
+        flex-flow: row;
+        justify-content: space-between;
+        overflow-y: hidden;
+        overflow-x: visible;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #about::-webkit-scrollbar {
+        display: none;
+    }
+
+    #about>section {
+        width: 47%;
+        align-self: center;
+    }
+
+    #about #description {
+        font-size: 2em;
+        z-index: 2;
+    }
+}
+
+/* General Styles */
+#about strong {
+    color: #fcde67;
+}
+
+#skills>ul {
+    list-style-type: none;
+    list-style-position: inside;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skills>ul li {
+    margin: 16px;
+}
+
+#experience ul,
+#certifications ul {
+    list-style-position: inside;
+}
+
+/* Chip like tag styles for frameworks, etc */
+.tag {
+    background-color: #439a86ff;
+    border-radius: 18px;
+    width: max-content;
+    padding: 6px 20px;
+    margin: 6px;
+    font-size: 12px;
+    color: white;
+    position: relative;
+}
+
+.tag:hover {
+    box-shadow: 0px 0px 3px grey;
+}
+
+.tag.teamwork {
+    animation: float-sideways 4s ease-out infinite both;
+}
+
+.tag.js {
+    background-color: rgb(240, 219, 79);
+    color: black;
+    animation: moving 10s forwards, float-sideways-4 7s ease infinite forwards;
+}
+
+.tag.html {
+    background-color: (241, 101, 41);
+    color: black;
+    animation: float-sideways-2 4s ease-out infinite both;
+}
+
+.tag.css {
+    background-color: rgb(38, 77, 228);
+    color: #fff;
+    animation: float-sideways 4s ease-out infinite both;
+}
+
+.tag.react {
+    background-color: rgb(97, 219, 251);
+    color: white;
+    animation: come-in-and-float 9s ease-out 3s forwards, float-vertical 5s ease-in-out infinite;
+}
+
+.tag.react-native {
+    background-color: rgb(97, 219, 251);
+    color: white;
+    animation: come-in-and-float-2 4s ease 6.8s forwards, float-vertical-3 5s ease-in-out infinite;
+}
+
+.tag.redux {
+    background-color: rgb(118, 74, 188);
+    color: white;
+    animation: come-in-and-float 10.7s ease 4.6s forwards, float-vertical-2 7s ease-in-out infinite;
+}
+
+.tag.mysql {
+    background-color: rgb(242, 145, 17);
+    color: rgb(0, 117, 143);
+    animation: moving-randomly 10s infinite 3s forwards, float-vertical 5s ease-in-out infinite;
+}
+
+.tag.mongodb {
+    background-color: rgb(77, 179, 61);
+    color: rgb(232, 231, 213);
+    animation: come-in-and-float 7s ease-in 5s, float-sideways-3 7s ease-out infinite both;
+}
+
+.tag.java {
+    background-color: rgb(237, 139, 0);
+    color: white;
+    animation: popup 6s ease-out forwards, float-sideways-2 4s ease-out infinite both;
+}
+
+.tag.spring {
+    background-color: rgb(109, 179, 63);
+    color: white;
+    animation:
+        come-in-and-float 9.3s ease-in-out forwards float-sideways 5s ease-in-out,
+        float-vertical-3 15s ease-in-out,
+        grow-up 6s ease-in-out 5s forwards,
+        float-sideways 5s ease-in-out infinite;
+}
+
+.tag.liquibase {
+    background-color: rgb(40, 98, 255);
+    color: white;
+    animation: popup 3s ease-in forwards, float-sideways-2 5s ease-in-out infinite both;
+}
+
+.tag.php {
+    background-color: rgb(71, 74, 138);
+    color: white;
+    animation: come-from-right 10s ease-out forwards, float-sideways 7s infinite forwards;
+}
+
+.tag.material-ui {
+    background-color: rgb(117, 124, 232);
+    color: white;
+    animation: come-in-and-float 14.3s ease-in-out forwards, float-sideways 14s ease-out infinite both;
+}
+
+.tag.bootstrap {
+    background-color: rgb(86, 61, 124);
+    color: white;
+    animation: come-in-and-float-2 16.3s ease-in-out forwards, float-sideways-4 14s ease-out infinite both;
+}
+
+.tag.scrum {
+    background-color: rgb(64, 88, 111);
+    color: white;
+    animation: come-in-and-float-2 8s ease-in-out forwards, 5.5s ease-out infinite both;
+}
+
+.tag.sass {
+    background-color: rgb(205, 103, 153);
+    color: white;
+    animation: come-in-and-float 18s ease-in-out forwards, float-sideways-3 4s ease-out infinite both;
+}

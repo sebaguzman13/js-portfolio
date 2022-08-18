@@ -1,6 +1,53 @@
 /* Mobile Styles */
 @media screen and (max-width: 600px) {
-    
+    #contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 100px;
+    }
+
+    #contact section {
+        padding: 0;
+        text-align: center;
+    }
+
+    #contact h3 {
+        font-size: 1.8em;
+        color: #fcde67;
+        text-transform: uppercase;
+        font-family: 'Montserrat';
+    }
+
+    #contact .envelope-wrapper {
+        display: none;
+    }
+
+    #contact a[href^="mailto"] {
+        display: none;
+    }
+
+    #contact #contact-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 3rem auto;
+        padding: 0 1rem;
+    }
+
+    #contact-form .send-button {
+        background-color: #fcde67;
+        margin-top: 20px;
+        text-transform: uppercase;
+        align-self: center;
+        width: 100%;
+        font-family: Montserrat;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-radius: 10px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
 }
 
 /* Tablet Styles */
@@ -11,4 +58,135 @@
 /* Desktop Styles */
 .hidden, .honey-pot {
     display:none;
+}
+
+@media screen and (min-width: 901px) {
+    #contact {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    #contact section {
+        flex-grow: 1;
+        padding-right: 5ch;
+        padding-bottom: 5em;
+    }
+
+    #contact h3 {
+        font-size: 1.8em;
+        color: #fcde67;
+        text-transform: uppercase;
+        font-family: 'Montserrat';
+    }
+
+    #contact .envelope-wrapper {
+        flex-flow: row;
+        margin-top: 4rem;
+    }
+
+    #contact #contact-form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        color: black;
+    }
+
+    #contact-form button {
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+
+    #contact-form .send-button {
+        width: min-content;
+        align-self: end;
+        transition: all .75s;
+        padding: 0.5em 2.5em;
+    }
+    
+    .send-button::before {
+        display: block;
+        content: "Send";
+        transition: all .75s;
+    }
+
+}
+
+/* General Styles */
+#contact p {
+    color: white;
+    font-weight: bold;
+}
+
+
+#contact .subtitle {
+    font-size: 3.85em;
+    margin: 1rem auto;
+    color: #222e50ff;
+}
+
+
+
+#contact div p {
+    color: black;
+    font-size: 1rem;
+}
+
+#contact a[href^="mailto"] {
+    position: relative;
+    top: -8px;
+    text-decoration: none;
+    color: #fcde67;
+    letter-spacing: 0.72px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all .45s;
+}
+
+
+
+.envelope {
+    display: inline-flex;
+    height: 1.5rem;
+    margin-right: 2ch;
+}
+
+
+
+#contact-form>* {
+    margin-top: 0.5em;
+}
+
+#contact-form label {
+    text-transform: uppercase;
+    color: #f0f8ff;
+    letter-spacing: 0.61px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 8px;
+    background-color: #ffffffa8;
+    border-radius: 10px;
+    border-top: 2px inset rgba(58, 58, 58, .7);
+    border-left: 2px inset rgba(58, 58, 58, .7);
+}
+
+textarea {
+    resize: none;
+}
+
+#name-error,
+#email-error,
+#message-error {
+    color: red;
+    padding: 3px 9px;
+    min-height: 1.5em;
+}
+
+#contact-form .send-button:hover {
+    animation: 0.85s linear button-background-change forwards;
+}
+
+.send-button:hover::before {
+    transform: rotateY(-360deg);
 }

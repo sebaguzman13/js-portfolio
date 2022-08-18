@@ -1214,26 +1214,26 @@ on page load and assign the result to the .tag elements */
 /* Mobile menu button animations */
 @keyframes flip-sign {
     0% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
     }
 
     70% {
         transform: rotateY(-220deg);
     }
 
-    85% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+    88% {
+        background: url('./../assets/cross.svg') no-repeat center;
     }
 
     100% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
         transform: rotateY(-36deg);
     }
 }
 
 @-webkit-keyframes flip-sign {
     0% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
     }
 
     70% {
@@ -1241,18 +1241,18 @@ on page load and assign the result to the .tag elements */
     }
 
     85% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
     }
 
     100% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
         transform: rotateY(-36deg);
     }
 }
 
 @-moz-keyframes flip-sign {
     0% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-comcross.svg') no-repeat center;
     }
 
     70% {
@@ -1260,18 +1260,18 @@ on page load and assign the result to the .tag elements */
     }
 
     85% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
     }
 
     100% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
         transform: rotateY(-36deg);
     }
 }
 
 @-o-keyframes flip-sign {
     0% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
     }
 
     70% {
@@ -1279,18 +1279,18 @@ on page load and assign the result to the .tag elements */
     }
 
     85% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
     }
 
     100% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
         transform: rotateY(-36deg);
     }
 }
 
 @-ms-keyframes flip-sign {
     0% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
     }
 
     70% {
@@ -1298,18 +1298,18 @@ on page load and assign the result to the .tag elements */
     }
 
     85% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
     }
 
     100% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
         transform: rotateY(-36deg);
     }
 }
 
 @keyframes flip-sign-back {
     0% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
     }
 
     70% {
@@ -1317,18 +1317,18 @@ on page load and assign the result to the .tag elements */
     }
 
     85% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
     }
 
     100% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
         transform: rotateY(360deg)
     }
 }
 
 @-webkit-keyframes flip-sign-back {
     0% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
     }
 
     70% {
@@ -1336,18 +1336,18 @@ on page load and assign the result to the .tag elements */
     }
 
     85% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
     }
 
     100% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
         transform: rotateY(360deg)
     }
 }
 
 @-moz-keyframes flip-sign-back {
     0% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
     }
 
     70% {
@@ -1355,18 +1355,18 @@ on page load and assign the result to the .tag elements */
     }
 
     85% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
     }
 
     100% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
         transform: rotateY(360deg)
     }
 }
 
 @-o-keyframes flip-sign-back {
     0% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
     }
 
     70% {
@@ -1374,18 +1374,18 @@ on page load and assign the result to the .tag elements */
     }
 
     85% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
     }
 
     100% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
         transform: rotateY(360deg)
     }
 }
 
 @-ms-keyframes flip-sign-back {
     0% {
-        background: url('./../assets/open-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/cross.svg') no-repeat center;
     }
 
     70% {
@@ -1393,11 +1393,11 @@ on page load and assign the result to the .tag elements */
     }
 
     85% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
     }
 
     100% {
-        background: url('./../assets/closed-svgrepo-com.svg') no-repeat center;
+        background: url('./../assets/menu-svgrepo-com.svg') no-repeat center;
         transform: rotateY(360deg)
     }
 }
@@ -1571,6 +1571,51 @@ on page load and assign the result to the .tag elements */
         top: 0;
         transform: rotateY(-720deg) translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes pull-down-and-back {
+    0%, 100% {
+        bottom: 0;
+    }
+    750% {
+        bottom: 1rem;
+    }
+}
+
+@-webkit-keyframes pull-down-and-back {
+    0%, 100% {
+        bottom: 0;
+    }
+    750% {
+        bottom: 1rem;
+    }
+}
+
+@-moz-keyframes pull-down-and-back {
+    0%, 100% {
+        bottom: 0;
+    }
+    750% {
+        bottom: 1rem;
+    }
+}
+
+@-o-keyframes pull-down-and-back {
+    0%, 100% {
+        bottom: 0;
+    }
+    750% {
+        bottom: 1rem;
+    }
+}
+
+@-ms-keyframes pull-down-and-back {
+    0%, 100% {
+        bottom: 0;
+    }
+    750% {
+        bottom: 1rem;
     }
 }
 /* Home text animation */

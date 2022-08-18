@@ -1,11 +1,115 @@
 /* Mobile Styles */
 @media screen and (max-width: 600px) {
-    
+    #projects .entries {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+    }
+
+    #projects .entry {
+        width: 100vw;
+        opacity: 1;
+    }
+
+    #projects .entry img {
+        height: 30vh;
+        width: 30vh;
+    }
+
 }
 
 /* Tablet Styles */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {}
+
+/* General -- Desktop Styles */
+
+#projects {
+    text-align: center;
+    justify-content: space-around;
+}
+
+#projects h3 {
+    font-size: 2.5em;
+    color: #fcde67;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+}
+
+#projects .entries {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5%;
+    overflow-x: scroll;
+}
+
+#projects .entry {
+    border-radius: 0 10px 0 0;
+    background: #e5e5e5ab;
+    border-radius: 10px;
+    transition: all 0.45s;
+    opacity: 1;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    width: 96vw;
+    overflow-y: hidden;
+}
+
+#projects .entry:hover {
+    background: linear-gradient(transparent 35%, #439a86aa 95%);
+    opacity: 1;
+    scale: 1.05;
+}
+
+#projects .entry img {
+    border-radius: 100%;
+    display: block;
+    margin: 0.25em auto 2rem auto;
+}
+
+#projects .entry img:hover {
+    box-shadow: 0 0 2px gray;
+    cursor: pointer;
+}
+
+.entry a {
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #222e50ff;
+}
+
+.entry p {
+    padding: 2ch;
+    color: white;
+    max-width: 60%;
+}
+
+.project-indicator {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -1rem;
 
 }
 
-/* Desktop Styles */
+.project-indicator i {
+    background-color: #fcde67;
+    border-radius: 100%;
+    margin: 0 0.5rem;
+}
+
+.project-indicator>i::after {
+    content: 'B';
+    display: block;
+    color: transparent;
+    font-size: 10px;
+    margin-right: 1ch;
+}
+
+.project-indicator>i.displayed {
+    background-color: #fcde67;
+    scale: 1.4;
+}
