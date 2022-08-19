@@ -53,7 +53,7 @@
         height: 0.5rem;
         background: linear-gradient(90deg, #fcde67, white);
         width: 0;
-        animation: open-right 4.5s ease 2s forwards;
+        animation: open-right 4.5s ease 8.3s forwards;
     }
 
     .icon.light-bulb {

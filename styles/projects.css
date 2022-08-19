@@ -25,6 +25,7 @@
 #projects {
     text-align: center;
     justify-content: space-around;
+    padding-top: 8vh;
 }
 
 #projects h3 {
@@ -39,6 +40,14 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 5%;
     overflow-x: scroll;
+    overflow-y: visible;
+    width: 60vw;
+    margin: auto;
+    padding: 1rem;
+}
+
+#projects .entries::-webkit-scrollbar {
+    display: none;
 }
 
 #projects .entry {
@@ -53,12 +62,17 @@
     flex-direction: column;
     align-items: center;
     height: 70vh;
-    width: 96vw;
+    width: 50vw;
     overflow-y: hidden;
 }
 
+#projects .entry.selected {
+    background: linear-gradient(#439a86aa 5%, transparent 35%, #439a86aa 95%);
+    scale: 1.05;
+}
+
 #projects .entry:hover {
-    background: linear-gradient(transparent 35%, #439a86aa 95%);
+    background: linear-gradient(#439a86aa 5%, transparent 35%, #439a86aa 95%);
     opacity: 1;
     scale: 1.05;
 }
@@ -67,6 +81,7 @@
     border-radius: 100%;
     display: block;
     margin: 0.25em auto 2rem auto;
+    width: 30vh;
 }
 
 #projects .entry img:hover {

@@ -1576,46 +1576,46 @@ on page load and assign the result to the .tag elements */
 
 @keyframes pull-down-and-back {
     0%, 100% {
-        bottom: 0;
+        transform: translateY(0)
     }
-    750% {
-        bottom: 1rem;
+    75% {
+        transform: translateY(5px);
     }
 }
 
 @-webkit-keyframes pull-down-and-back {
     0%, 100% {
-        bottom: 0;
+        transform: translateY(0)
     }
-    750% {
-        bottom: 1rem;
+    75% {
+        transform: translateY(5px);
     }
 }
 
 @-moz-keyframes pull-down-and-back {
     0%, 100% {
-        bottom: 0;
+        transform: translateY(0)
     }
-    750% {
-        bottom: 1rem;
+    75% {
+        transform: translateY(5px);
     }
 }
 
 @-o-keyframes pull-down-and-back {
     0%, 100% {
-        bottom: 0;
+        transform: translateY(0)
     }
-    750% {
-        bottom: 1rem;
+    75% {
+        transform: translateY(5px);
     }
 }
 
 @-ms-keyframes pull-down-and-back {
     0%, 100% {
-        bottom: 0;
+        transform: translateY(0)
     }
-    750% {
-        bottom: 1rem;
+    75% {
+        transform: translateY(5px);
     }
 }
 /* Home text animation */

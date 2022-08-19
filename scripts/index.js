@@ -74,7 +74,7 @@ function fillHomeLegend() {
 
   let legends = getLegendsForDevice();
 
-  let toInsert = legends[0].concat(bulb);
+  let toInsert = legends[0].split('').concat(bulb);
 
   let legendNode = document.getElementById('home').getElementsByTagName('h3').item(0);
   
@@ -91,7 +91,7 @@ function fillHomeLegend() {
   })
 
   setTimeout(() => {
-    legends[1].forEach((e, index) => {
+    legends[1].split('').forEach((e, index) => {
       setTimeout(() => {
         if (typeof(e) === 'string') {
           legendNode.appendChild(document.createTextNode(e));
