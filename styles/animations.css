@@ -139,7 +139,7 @@
         transform: translateX(0vw);
     }
 }
-
+/* Increase scales animations */
 @keyframes grow-up {
     100% {
         transform: scale(1.35);
@@ -170,6 +170,66 @@
     }
 }
 
+@keyframes grow-up-2 {
+    100% {
+        transform: scale(1.17);
+    }
+}
+
+@-webkit-keyframes grow-up-2 {
+    100% {
+        transform: scale(1.17);
+    }
+}
+
+@-moz-keyframes grow-up-2 {
+    100% {
+        transform: scale(1.17);
+    }
+}
+
+@-o-keyframes grow-up-2 {
+    100% {
+        transform: scale(1.17);
+    }
+}
+
+@-ms-keyframes grow-up-2 {
+    100% {
+        transform: scale(1.17);
+    }
+}
+
+@keyframes grow-up-3 {
+    100% {
+        transform: scale(1.09);
+    }
+}
+
+@-webkit-keyframes grow-up-3 {
+    100% {
+        transform: scale(1.09);
+    }
+}
+
+@-moz-keyframes grow-up-3 {
+    100% {
+        transform: scale(1.09);
+    }
+}
+
+@-o-keyframes grow-up-3 {
+    100% {
+        transform: scale(1.09);
+    }
+}
+
+@-ms-keyframes grow-up-3 {
+    100% {
+        transform: scale(1.09);
+    }
+}
+/* Slightly move element up */
 @keyframes move-up {
     100% {
         transform: translateY(30px);
@@ -199,7 +259,7 @@
         transform: translateY(30px);
     }
 }
-
+/* Move element vertically */
 @keyframes float-vertical {
     25% {
         transform: translateY(5px);
@@ -770,7 +830,7 @@
     }
 
     10% {
-        transform: translateX(15vw) translateY(55vh);
+        transform: translateX(15vw) translateY(35vh);
     }
 
     100% {
@@ -784,7 +844,7 @@
     }
 
     10% {
-        transform: translateX(15vw) translateY(55vh);
+        transform: translateX(15vw) translateY(35vh);
     }
 
     100% {
@@ -798,7 +858,7 @@
     }
 
     10% {
-        transform: translateX(15vw) translateY(55vh);
+        transform: translateX(15vw) translateY(35vh);
     }
 
     100% {
@@ -812,7 +872,7 @@
     }
 
     10% {
-        transform: translateX(15vw) translateY(55vh);
+        transform: translateX(15vw) translateY(35vh);
     }
 
     100% {
@@ -826,7 +886,7 @@
     }
 
     10% {
-        transform: translateX(15vw) translateY(55vh);
+        transform: translateX(15vw) translateY(35vh);
     }
 
     100% {
@@ -840,7 +900,7 @@
     }
 
     15% {
-        transform: translateX(10vw) translateY(37vh);
+        transform: translateX(10vw) translateY(17vh);
     }
 
     100% {
@@ -854,7 +914,7 @@
     }
 
     15% {
-        transform: translateX(10vw) translateY(37vh);
+        transform: translateX(10vw) translateY(17vh);
     }
 
     100% {
@@ -868,7 +928,7 @@
     }
 
     15% {
-        transform: translateX(10vw) translateY(37vh);
+        transform: translateX(10vw) translateY(17vh);
     }
 
     100% {
@@ -882,7 +942,7 @@
     }
 
     15% {
-        transform: translateX(10vw) translateY(37vh);
+        transform: translateX(10vw) translateY(17vh);
     }
 
     100% {
@@ -896,7 +956,7 @@
     }
 
     15% {
-        transform: translateX(10vw) translateY(37vh);
+        transform: translateX(10vw) translateY(17vh);
     }
 
     100% {
@@ -1468,7 +1528,7 @@ on page load and assign the result to the .tag elements */
     }
 
     70% {
-        transform: translateY(5px);
+        transform: translateY(-12px);
     }
 
     100% {
@@ -1492,7 +1552,7 @@ on page load and assign the result to the .tag elements */
     }
 
     70% {
-        transform: translateY(5px);
+        transform: translateY(-12px);
     }
 
     100% {
@@ -1516,7 +1576,7 @@ on page load and assign the result to the .tag elements */
     }
 
     70% {
-        transform: translateY(5px);
+        transform: translateY(-12px);
     }
 
     100% {
@@ -1540,7 +1600,7 @@ on page load and assign the result to the .tag elements */
     }
 
     70% {
-        transform: translateY(5px);
+        transform: translateY(-12px);
     }
 
     100% {
@@ -1564,7 +1624,7 @@ on page load and assign the result to the .tag elements */
     }
 
     70% {
-        transform: translateY(5px);
+        transform: translateY(-12px);
     }
 
     100% {

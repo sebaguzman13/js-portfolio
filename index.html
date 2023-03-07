@@ -36,18 +36,21 @@
         </nav>
 
         <section class="right-section hide-mobile" id="social-links">
-            <a target="_blank" href="https://github.com/sebaguzman13" rel="external"><i class="icon github"></i></a>
+            <a target="_blank" href="https://github.com/sebaguzman13" rel="external"
+                aria-label="Github page of sebaguzman13"><i class="icon github"></i></a>
 
-            <a target="_blank" href="https://linkedin.com/in/sebastian-javier-guzman" rel="external"><i class="icon linkedin"></i></a>
+            <a target="_blank" href="https://linkedin.com/in/sebastian-javier-guzman" rel="external"
+                aria-label="LinkedIn of Sebastian J Guzman"><i class="icon linkedin"></i></a>
 
-            <a target="_blank" href="./assets/Sebastian-Javier-Guzman.pdf" rel="author noreferrer noopener"><i class="icon cv"></i></a>
+            <a target="_blank" href="./assets/Sebastian-Javier-Guzman.pdf" rel="author noreferrer noopener"
+                aria-label="Download Sebastian J Guzman CV"><i class="icon cv"></i></a>
         </section>
         <section class="mobile-only" id="mobile-social">
             <button class="round-button social-btn" onclick="toggleSocialMenu()"><i id="social-menu"
                     class="socials"></i></button>
         </section>
     </header>
-    <aside>
+    <aside role="languages">
         <section id="languages">
             <ul>
                 <li class="flag arg"><i>ESP</i></li>
@@ -71,7 +74,8 @@
                     <a href="#contact" rel="bookmark">CONTACT</a>
                 </li>
                 <li>
-                    <a target="_blank" href="https://github.com/sebaguzman13" rel="author external"><i class="icon github"></i></a>
+                    <a target="_blank" href="https://github.com/sebaguzman13" rel="author external"><i
+                            class="icon github"></i></a>
 
                     <a target="_blank" href="https://linkedin.com/in/sebastian-javier-guzman" rel="author external"><i
                             class="icon linkedin"></i></a>
@@ -81,11 +85,14 @@
             </ul>
 
         </section>
-        <section id="home">
-            <!-- <h3>Web Development from<br /><i class="icon light-bulb"></i><span style="display: none">i</span>dea to
-                carrer</h3> -->
-                <h3></h3>
-                <div class="carrer-line"></div>
+        <section id="home" aria-live="polite" aria-atomic="true">
+            <h2>Web Development</h2>
+            <h3 aria-label="Home section sentence">
+                <span class="rotate-90-up">from</span> 
+                <span class="idea-word">IDEA</span> 
+                <span class="to-word">to</span> 
+                <span class="career-word">CAREER</span></h3>
+            <div class="carrer-line"></div>
         </section>
 
         <section id="about">
@@ -119,45 +126,55 @@
 
         <section id="projects">
             <h3>Projects</h3>
+            <div class="nav-left">Left</div>
+            <div class="nav-right">right</div>
             <section class="entries">
                 <article class="entry">
                     <a target="_blank" href="https://sjg-project-manager.netlify.app/">
                         <img src="./assets/project-manager.png" alt="Project Manager" />
                     </a>
-                    <a target="_blank" href="https://sjg-project-manager.netlify.app/">Project Manager</a>
-                    <p>Projects CRUD Manager, update Status, Manager and person in charge of the project.</p>
+                    <section class="description">
+                        <a target="_blank" href="https://sjg-project-manager.netlify.app/">Project Manager</a>
+                        <p>Projects CRUD Manager, update Status, Manager and person in charge of the project.</p>
+                    </section>
                 </article>
 
                 <article class="entry">
                     <a target="_blank" href="https://zilean-counter.netlify.app/">
                         <img src="./assets/zilean.png" alt="Zilean Counter" />
                     </a>
-                    <a target="_blank" href="https://zilean-counter.netlify.app/">Zilean Counter</a>
-                    <p>Counter inspired on the Champion Zilean</p>
+                    <section class="description">
+                        <a target="_blank" href="https://zilean-counter.netlify.app/">Zilean Counter</a>
+                        <p>Counter inspired on the Champion Zilean</p>
+                    </section>
                 </article>
 
                 <article class="entry">
                     <a target="_blank" href="https://www.ticketon.com/">
                         <img src="./assets/ticketon-o.png" alt="Ticketon" />
                     </a>
-                    <a target="_blank" href="https://www.ticketon.com/">Ticketon</a>
-                    <p>Event handler and Ticket selling application</p>
+                    <section class="description">
+                        <a target="_blank" href="https://www.ticketon.com/">Ticketon</a>
+                        <p>Event handler and Ticket selling application</p>
+                    </section>
                 </article>
 
                 <article class="entry">
                     <a target="_blank" href="https://tbtm.app/">
                         <img src="./assets/tbtm-mic.png" alt="Take back the mic" />
                     </a>
-                    <a target="_blank" href="https://tbtm.app/">Tbtm</a>
-                    <p>Take Back The Mic - Upload your art, share it with your friends amp it, and win the annual
-                        contest !</p>
+                    <section class="description">
+                        <a target="_blank" href="https://tbtm.app/">Tbtm</a>
+                        <p>Take Back The Mic - Upload your art, share it with your friends amp it, and win the annual
+                            contest !</p>
+                    </section>
                 </article>
             </section>
             <section class="project-indicator mobile-only">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
+                <i onclick="navigateProjects(0)"></i>
+                <i onclick="navigateProjects(1)"></i>
+                <i onclick="navigateProjects(2)"></i>
+                <i onclick="navigateProjects(3)"></i>
             </section>
         </section>
 
@@ -169,24 +186,24 @@
                     Send me a message with your application thoughts and we'll make it real.
                 </p>
                 <section class="envelope-wrapper">
-                    <img src="./assets/icons8-mail-50.png" alt="email" class="envelope hide-mobile"/><a href=""></a>
+                    <img src="./assets/icons8-mail-50.png" alt="email" class="envelope hide-mobile" /><a href=""></a>
                 </section>
             </section>
 
-            <form id="contact-form" action="FORM_ACTION_URI" method="POST">
+            <form id="contact-form" action="FORM_ACTION_URL" method="POST">
                 <input type="hidden" name="_subject" value="New Portfolio contact">
 
                 <label for="name">Name</label>
-                <input id="name" name="name" type="text" required />
-                <p id="name-error"></p>
+                <input id="name" name="name" type="text" required aria-required="true" aria-label="Enter your name" />
+                <p id="name-error" aria-live="assertive"></p>
 
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required />
-                <p id="email-error"></p>
+                <label for="email" aria-label="Enter your email">Email</label>
+                <input id="email" name="email" type="email" required aria-required="true" />
+                <p id="email-error" aria-live="assertive"></p>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
-                <p id="message-error"></p>
+                <label for="message" aria-label="Input what you want me to know">Message</label>
+                <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+                <p id="message-error" aria-live="assertive"></p>
 
                 <input type="hidden" name="_next" value="DEPLOY_URL">
                 <input type="text" name="_honey" class="honey-pot">
@@ -195,7 +212,8 @@
                 <button class="send-button" type="submit"></button>
             </form>
         </section>
-        <button onclick="scrollToTop()" class="round-button"><i class="icon uparrow"></i></button>
+        <button onclick="scrollToTop()" class="round-button" aria-label="Scroll to the top of the page"><i
+                class="icon uparrow"></i></button>
     </main>
     <footer>
         <section class="right-section">

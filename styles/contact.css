@@ -10,6 +10,7 @@
     #contact section {
         padding: 0;
         text-align: center;
+        align-self: center;
     }
 
     #contact h3 {
@@ -48,6 +49,12 @@
         border-radius: 10px;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+    }
+
+    #contact-form .send-button::before {
+        display: block;
+        content: "Send";
+        transition: all .75s;
     }
 }
 
@@ -110,7 +117,6 @@
         content: "Send";
         transition: all .75s;
     }
-
 }
 
 /* General Styles */

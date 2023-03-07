@@ -1,8 +1,4 @@
-console.log("loaded js")
-
 window.onload = function () {
-
-  fillHomeLegend();
 
   let drawerEntries = document.getElementById("mobile-drawer").querySelectorAll('a[href^="#"]');
   if (!!drawerEntries) {
@@ -10,6 +6,11 @@ window.onload = function () {
       entry.addEventListener("click", toggleMenu);
     }
   }
+  
+  fillHomeLegend();
+  // Select first project and indicator as active
+  document.getElementsByClassName('entry')?.item(0)?.classList.toggle('active')
+  document.getElementsByClassName('project-indicator')?.item(0)?.children.item(0).classList.toggle('active');
 
   setTimeout(() => {
     let base = 'sebaguzman13'
@@ -21,7 +22,7 @@ window.onload = function () {
     document.getElementById('contact-form').setAttribute('action', 'https://formsubmit.co/6ec6a26a5476f8441e0f9626d72ba8a7');
   }, 4000);
 }
-
+// END OF ONLOAD FUNCTION
 
 // Mobile Menu handler
 function toggleMenu() {
@@ -59,10 +60,14 @@ function insertIntoElementWithDelay(iterableToInsert, element, delayInMs) {
 function getLegendsForDevice() {
   let legendStart, legendEnd;
   if (window.innerWidth > 600) {
-    legendStart = 'Web Development from ';
-    legendEnd = 'dea to carrer';
+    // legendStart = 'Web Development\nfrom '.split('');
+    // legendStart = '\nfrom '.split('');
+    legendStart = '';
+    legendEnd = 'dea to carrer'.split('');
   } else {
-    legendStart = 'WebDev\nfrom'.split('').concat('\n');
+    // legendStart = 'Web Development from'.split('');
+    // legendStart = '\nfrom'.split('');
+    legendStart = '';
     legendEnd = 'dea'.split('').concat('\n', 'to carrer'.split(''));
   }
   return [legendStart, legendEnd]
@@ -70,28 +75,31 @@ function getLegendsForDevice() {
 
 function fillHomeLegend() {
   let bulb = document.createElement('i');
-  bulb.classList.add('icon', 'light-bulb')
+  bulb.classList.add('icon', 'light-bulb');
+  bulb.addEventListener('click', toggleLightBulb);
 
   let legends = getLegendsForDevice();
-
-  let toInsert = legends[0].split('').concat(bulb);
-
+  console.log("legendO", legends)
+  // let toInsert = legends[0].concat(bulb);
+  legends[0] = bulb;
   let legendNode = document.getElementById('home').getElementsByTagName('h3').item(0);
   
   let delayInMs = 500;
-  
-  toInsert.forEach((e, index) => {
+
+  for (let i = 0; i < legends.length; i++) {
     setTimeout(() => {
-      if (typeof(e) === 'string') {
-        legendNode.appendChild(document.createTextNode(e));
+      if (typeof(legends[i]) === 'string') {
+        console.log('String ', legends[i])
+        legendNode.appendChild(document.createTextNode(legends[i]));
       } else {
-        legendNode.appendChild(e);
+        console.log('append ', legends[i])
+        legendNode.appendChild(legends[i]);
       }
-    }, delayInMs + (index * 130))
-  })
+    }, delayInMs + (i * 130))
+  }
 
   setTimeout(() => {
-    legends[1].split('').forEach((e, index) => {
+    legends[1].forEach((e, index) => {
       setTimeout(() => {
         if (typeof(e) === 'string') {
           legendNode.appendChild(document.createTextNode(e));
@@ -100,12 +108,23 @@ function fillHomeLegend() {
         }
       }, delayInMs + (index * 180))
   })
-  }, 5300)
-
-// insertIntoElementWithDelay(toInsert, legendNode, 500);
-// setTimeout(() => {
-//   insertIntoElementWithDelay(legends[1], legendNode, 500)
-// }, 5300)
-
+  }, legends[0].includes('opment') ? 4700 : 3500)
 }
 
+/* Enables background and color changes, like a theme changer */
+function toggleLightBulb() {
+  document.getElementsByClassName('light-bulb').item(0).classList.toggle('turned-on');
+  document.body.classList.toggle('turned-on')
+}
+
+/* Set the Project entry that's gonna be centered */
+function navigateProjects(index) {
+  let projects = document.getElementsByClassName("entry");
+
+  let isActive = projects[index].classList.contains('active');
+  if (!isActive) {
+    document.getElementsByClassName('entry active')?.item(0)?.classList.toggle('active');
+    projects[index].classList.toggle('active');
+    document.getElementsByClassName('project-indicator')?.item(index)?.classList.toggle('active');
+  }
+}

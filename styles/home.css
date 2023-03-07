@@ -1,3 +1,58 @@
+/* General Styles */
+.icon.light-bulb {
+    animation: bulb-animation 1.5s ease-in .35s forwards, pull-down-and-back 1.45s ease-in 7.5s forwards infinite;
+}
+
+.icon.light-bulb.turned-on {
+    background-image: url('./../assets/light-bulb-on-svgrepo-com.svg');
+    filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.4));
+}
+
+body.turned-on #home .carrer-line {
+    box-shadow: 2px 2px 2px lightgray;
+}
+
+body.turned-on #home {
+    color: inherit;
+}
+
+#home h2 {
+    animation: come-from-right 1.15s ease-in-out forwards;
+}
+
+.rotate-90-up {
+    transform: rotate(-90deg);
+    display: inline-block;
+    padding-left: 30px;
+    font-size: 0.34em;
+}
+
+.idea-word {
+    margin-left: -35px;
+}
+
+.to-word {
+    font-size: 0.3em;
+}
+
+.career-word {
+    display: block;
+    float: right;
+}
+
+#home h3 {
+    font-size: 0.8em;
+    width: 80%;
+}
+
+body .carrer-line {
+    background: linear-gradient(90deg, #fcde67, white);
+}
+
+body.turned-on .carrer-line {
+    background: linear-gradient(90deg, white, #fcde67);
+}
+
 /* Mobile Styles */
 @media screen and (max-width: 600px) {
     #home {
@@ -5,11 +60,23 @@
         color: #fcde67;
         padding-left: 1rem;
         padding-right: 1rem;
+        padding-top: 0;
+    }
+
+    #home h2 {
+        padding-top: 15vh;
+        overflow-wrap: break-word;
     }
 
     #home h3 {
+        font-size: 0.5em;
+        /* line-height: 6rem; */
         white-space: pre-wrap;
         padding-left: 1.5ch;
+    }
+
+    .rotate-90-up {
+        font-size: 1em;
     }
 
     .icon.light-bulb {
@@ -19,16 +86,20 @@
         background-repeat: no-repeat;
         background-position: center;
         display: inline-block;
-        animation: bulb-animation 1.5s ease-in .35s forwards, pull-down-and-back 1s ease-in 3s forwards;
+        animation: bulb-animation 1.5s ease-in .35s forwards, pull-down-and-back 1.45s ease-in 7.5s forwards infinite;
         opacity: 0;
+    }
+
+    .icon.light-bulb.turned-on {
+        background-image: url('./../assets/light-bulb-on-svgrepo-com.svg');
     }
 
     #home .carrer-line {
         position: relative;
-        left: 40vw;
+        left: 17vw;
         height: 0.5rem;
-        background: linear-gradient(90deg, #fcde67, white);
         width: 0;
+        max-width: 17.5ch;
         animation: open-right 4.5s ease 10s forwards;
     }
 }
@@ -49,10 +120,10 @@
 
     #home .carrer-line {
         position: relative;
-        left: 40vw;
+        left: 17vw;
         height: 0.5rem;
-        background: linear-gradient(90deg, #fcde67, white);
         width: 0;
+        max-width: 17.5ch;
         animation: open-right 4.5s ease 8.3s forwards;
     }
 
@@ -60,8 +131,8 @@
         background: url('./../assets/light-bulb-svgrepo-com.svg');
         background-repeat: no-repeat;
         background-position: center;
-        height: 100px;
-        width: 100px;
+        height: 1em;
+        width: 1em;
         display: inline-block;
         animation: bulb-animation 1.5s ease-in .35s forwards;
         opacity: 0;
